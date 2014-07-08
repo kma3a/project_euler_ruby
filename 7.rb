@@ -1,20 +1,19 @@
 def prime(num)
-	count = 3
-	prime_array = [2]
-	while prime_array.length < num
+	count = 2
+	current_num = 3
+	while count != num
 		divis = true
-		for x in (2...(count/2))
-			if count % x == 0
+		for x in (2...(current_num/2))
+			if current_num % x == 0
 				divis = false
 			end
 		end
 		if divis
-			prime_array << count
+			count += 1
 		end
-		p prime_arraycd Desktop
-		count += 1
+		current_num += 1
 	end
-	prime_array.pop
+	current_num
 end
 
 p prime(10001)

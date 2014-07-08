@@ -17,6 +17,6 @@ def fib_count(end_point)
 	other_count
 end
 
-p fib_count(3) == 144
-p fib_count(4)
+p fib_count(3) == 12
+p fib_count(2) == 7
 p fib_count(1000)
