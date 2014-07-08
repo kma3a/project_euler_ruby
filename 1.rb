@@ -1,24 +1,20 @@
 class Number
 
-	attr_accessor :num, :nat_nums
+	attr_accessor :num, :sum
 
 	def initialize(num)
 		@num = num
-		@nat_nums = []
+		@sum = 0
 	end
 
 	def loop
 		(1...num).each do |x|
-			nat_nums << x if check(x)
+			self.sum += x if check(x)
 		end
 	end
 
 	def check(num)
 		num % 3 == 0 || num % 5 == 0
-	end
-
-	def sum
-		nat_nums.inject(&:+)
 	end
 
 end
