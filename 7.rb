@@ -1,19 +1,25 @@
-def prime(num)
-	count = 2
-	current_num = 3
-	while count != num
-		divis = true
-		for x in (2...(current_num/2))
-			if current_num % x == 0
-				divis = false
-			end
-		end
-		if divis
-			count += 1
-		end
-		current_num += 1
-	end
-	current_num
+def check_prime(num)
+  for x in (2..(num/2))
+    if num % x == 0
+      return false
+    end
+  end
+  true
 end
 
-p prime(10001)
+def prime_count(end_num)
+  count = 1
+  current_num = 2
+  until count == end_num
+    current_num += 1
+    if check_prime(current_num)
+      count += 1
+    end
+  end
+  current_num
+end
+
+p prime_count(1)
+p prime_count(4)
+p prime_count(13)
+p prime_count(10001)
