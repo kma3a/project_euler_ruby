@@ -1,0 +1,4 @@
+def pyth(num)
+  
+
+end
