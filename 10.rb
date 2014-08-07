@@ -1,5 +1,5 @@
 def check_prime(num)
-  for x in (2..num/2)
+  for x in (2..Math.sqrt(num))
     if num % x == 0 
       return false
     end
